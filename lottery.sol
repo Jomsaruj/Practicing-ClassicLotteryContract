@@ -37,7 +37,7 @@ contract Lottery {
 
     function joinLotteryGame(uint _secret) public payable {
 
-        require(msg.value == 100000000000000000, "Deposit value must equal to exact 1 ETH"); // 100000000000000000 wei = 0.1 eth
+        require(msg.value == 100000000000000000, "Deposit value must equal to exact 0.1 ETH"); // 100000000000000000 wei = 0.1 eth
         require(num_participants < N, "Game is at its full capacity");
         require(block.timestamp <= T1 + start_time, "Game is already started");
 
